@@ -1,0 +1,38 @@
+﻿@model List<Employee>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Address</th>
+            <th>Gender</th>
+            <th>Dob</th>
+            <th>Join Date</th>
+            <th>Department</th>
+            <th>Designation</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var employee in Model)
+        {
+            <tr>
+                <td>@employee.Name</td>
+                <td>@employee.Email</td>
+                <td>@employee.Address</td>
+                <td>@employee.Gender</td>
+                <td>@employee.Dob?.ToString("MMMM dd, yyyy")</td>
+                <td>@employee.JoinDate.ToString("MMMM dd, yyyy")</td>
+                <td>@employee.Department</td>
+                <td>@employee.Designation</td>
+                <td>
+                    <a href="/employee/Edit/@employee.Id"><i class="bi bi-pencil-square text-warning"></i></a>
+                </td>
+                <td>
+                    <a href="/employee/delete"><i class="bi bi-trash-fill text-danger"></i></a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
