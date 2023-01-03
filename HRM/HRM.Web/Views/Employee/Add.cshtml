@@ -1,5 +1,10 @@
 ﻿@using HRM.Web.Enums;
 @model Employee
+@{
+    ViewData["Title"]="Add";
+    var departments = ViewData["departments"] as IEnumerable<SelectListItem>;
+
+}
 
 <form action="/employee/add" method="post">
     <div class="row">
@@ -13,14 +18,14 @@
         </div>
         <div class="mb-3 col-md-4">
             <label asp-for=Designation class="form-label"></label>
-            <input asp-for=Designation class="form-control">
+            <input asp-for=Designation class="form-control"> 
         </div>
     </div>
     <div class="row">
         
         <div class="mb-3 col-md-4">
         <label asp-for=Department class="form-label"></label>
-        <input asp-for=Department class="form-control">
+        <select  asp-for=Department asp-items=departments class="form-control"></select>
         </div>
         <div class="mb-3 col-md-4">
             <label asp-for=Dob class="form-label"></label>
