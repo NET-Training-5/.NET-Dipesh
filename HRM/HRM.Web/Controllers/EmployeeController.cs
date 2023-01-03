@@ -20,6 +20,10 @@ namespace HRM.Web.Controllers
 
             ViewData["departments"] = departments;
 
+            var designations = db.Designations.Select(x => new SelectListItem { Text = x.DesignationType, Value = x.DesignationType }).ToList();
+
+            ViewData["designations"] = designations;
+
             return View();
         }
 

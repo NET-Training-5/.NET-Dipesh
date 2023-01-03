@@ -3,6 +3,7 @@
 @{
     ViewData["Title"]="Add";
     var departments = ViewData["departments"] as IEnumerable<SelectListItem>;
+    var designations = ViewData["designations"] as IEnumerable<SelectListItem>;
 
 }
 
@@ -18,7 +19,7 @@
         </div>
         <div class="mb-3 col-md-4">
             <label asp-for=Designation class="form-label"></label>
-            <input asp-for=Designation class="form-control"> 
+            <select asp-for=Designation asp-items=designations class="form-control"></select>
         </div>
     </div>
     <div class="row">
