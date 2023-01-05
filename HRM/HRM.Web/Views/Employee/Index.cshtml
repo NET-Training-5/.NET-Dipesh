@@ -24,7 +24,7 @@
                 <td>@employee.Gender</td>
                 <td>@employee.Dob?.ToString("MMMM dd, yyyy")</td>
                 <td>@employee.JoinDate.ToString("MMMM dd, yyyy")</td>
-                <td>@employee.Department</td>
+                <td>@employee.Department?.Name</td>
                 <td>@employee.Designation</td>
                 <td>
                     <a href="/employee/Edit/@employee.Id"><i class="bi bi-pencil-square text-warning"></i></a>

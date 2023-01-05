@@ -1,6 +1,7 @@
 ﻿using HRM.Web.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
+using Microsoft.EntityFrameworkCore;
 
 namespace HRM.Web.Controllers
 {
@@ -10,13 +11,13 @@ namespace HRM.Web.Controllers
 
         public IActionResult Index()
         {
-            var employees = db.Employees.ToList();
+            var employees = db.Employees.Include(e => e.Department).ToList();
             return View(employees);
         }
 
         public IActionResult Add()
         {
-            var departments = db.Departments.Select(x => new SelectListItem { Text = x.Name, Value = x.Name }).ToList();
+            var departments = db.Departments.Select(x => new SelectListItem { Text = x.Name, Value = x.Id.ToString() }).ToList();
 
             ViewData["departments"] = departments;
 

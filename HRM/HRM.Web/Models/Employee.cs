@@ -17,8 +17,9 @@ namespace HRM.Web.Models
         public DateTime? Dob { get; set; }
         public DateTime JoinDate { get; set; }
 
-        public string Department { get; set; }
-
         public string Designation { get; set; }
+
+        public Department Department { get; set; }
+        public int DepartmentId { get; set; }
     }
 }
