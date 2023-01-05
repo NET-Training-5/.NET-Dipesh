@@ -1,7 +1,10 @@
-﻿@model HRM.Web.Models.Designation
+﻿@using HRM.Web.Enums;
+@model HRM.Web.Models.Designation
 
 @{
     ViewData["Title"] = "Create";
+    var roles = Enum.GetNames<Role>().Select(r => new SelectListItem { Text = r, Value = r });
+
 }
 
 <h1>Create</h1>
@@ -13,14 +16,19 @@
         <form asp-action="Create">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
-                <label asp-for="DesignationType" class="control-label"></label>
-                <input asp-for="DesignationType" class="form-control" />
-                <span asp-validation-for="DesignationType" class="text-danger"></span>
+                <label asp-for="Name" class="control-label"></label>
+                <input asp-for="Name" class="form-control" />
+                <span asp-validation-for="Name" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="Description" class="control-label"></label>
                 <input asp-for="Description" class="form-control" />
                 <span asp-validation-for="Description" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Role" class="control-label"></label>
+                <select asp-for="Role" asp-items="roles" class="form-control"></select>
+                <span asp-validation-for="Role" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <input type="submit" value="Create" class="btn btn-primary" />
