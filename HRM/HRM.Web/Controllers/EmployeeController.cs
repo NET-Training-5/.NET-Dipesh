@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
+using System.Reflection;
 
 namespace HRM.Web.Controllers
 {
@@ -9,15 +10,15 @@ namespace HRM.Web.Controllers
     {
         private HRDbContext db = new HRDbContext();
 
-        public IActionResult Index()
+        public async Task<IActionResult> Index()
         {
-            var employees = db.Employees.Include(e => e.Department).ToList();
+            var employees = await db.Employees.Include(e => e.Department).ToListAsync();
             return View(employees);
         }
 
-        public IActionResult Add()
+        public async Task<IActionResult> Add()
         {
-            var departments = db.Departments.Select(x => new SelectListItem { Text = x.Name, Value = x.Id.ToString() }).ToList();
+            var departments = await db.Departments.Select(x => new SelectListItem { Text = x.Name, Value = x.Id.ToString() }).ToListAsync();
 
             ViewData["departments"] = departments;
 
@@ -29,10 +30,14 @@ namespace HRM.Web.Controllers
         }
 
         [HttpPost]
-        public IActionResult Add(Employee employee)
+        public async Task<IActionResult> Add(Employee employee)
         {
-            db.Employees.Add(employee);
-            db.SaveChanges();
+            var relativePath = SaveProfileImage(employee.ProfileImage);
+
+            employee.ProfileImagePath = relativePath;
+
+            await db.Employees.AddAsync(employee);
+            await db.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
 
@@ -57,11 +62,24 @@ namespace HRM.Web.Controllers
         }
 
         [HttpPost]
-        public IActionResult Delete(Employee employee)
+        public async Task<IActionResult> Delete(Employee employee)
         {
             db.Employees.Remove(employee);
-            db.SaveChanges();
+            await db.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
+        }
+
+        private async Task<string> SaveProfileImage(IFormFile profileImage)
+        {
+            var fileName = profileImage.FileName;
+            var uniqueFileName = $"{Guid.NewGuid()}_{fileName}";
+            var relativePath = $"/images/profiles/{uniqueFileName}";
+            var currentAppPath = Directory.GetCurrentDirectory();
+            var fullFilePath = Path.Combine(currentAppPath, $"wwwroot/{relativePath}");
+
+            var stream = System.IO.File.Create(fullFilePath);
+            await profileImage.CopyToAsync(stream);
+            return relativePath;
         }
     }
 }

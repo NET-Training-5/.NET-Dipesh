@@ -5,6 +5,34 @@
       "PackagePath": "staticwebassets\\HRM.Web.bundle.scp.css"
     },
     {
+      "Id": "C:\\Users\\DELL\\Desktop\\Dot Net Training\\Bishnu Sir\\Web Development\\HRM\\HRM.Web\\wwwroot\\Images\\Perosn.jpg",
+      "PackagePath": "staticwebassets\\Images\\Perosn.jpg"
+    },
+    {
+      "Id": "C:\\Users\\DELL\\Desktop\\Dot Net Training\\Bishnu Sir\\Web Development\\HRM\\HRM.Web\\wwwroot\\Images\\Profiles\\02048c67-87bf-4222-85f4-90aa1ccb82c1_do.jfif",
+      "PackagePath": "staticwebassets\\Images\\Profiles\\02048c67-87bf-4222-85f4-90aa1ccb82c1_do.jfif"
+    },
+    {
+      "Id": "C:\\Users\\DELL\\Desktop\\Dot Net Training\\Bishnu Sir\\Web Development\\HRM\\HRM.Web\\wwwroot\\Images\\Profiles\\0925d82d-335a-4b4e-9fed-fd467dc95447_do.jfif",
+      "PackagePath": "staticwebassets\\Images\\Profiles\\0925d82d-335a-4b4e-9fed-fd467dc95447_do.jfif"
+    },
+    {
+      "Id": "C:\\Users\\DELL\\Desktop\\Dot Net Training\\Bishnu Sir\\Web Development\\HRM\\HRM.Web\\wwwroot\\Images\\Profiles\\7ad4ceb6-2c55-4308-b775-7bff10624b3c_do.jfif",
+      "PackagePath": "staticwebassets\\Images\\Profiles\\7ad4ceb6-2c55-4308-b775-7bff10624b3c_do.jfif"
+    },
+    {
+      "Id": "C:\\Users\\DELL\\Desktop\\Dot Net Training\\Bishnu Sir\\Web Development\\HRM\\HRM.Web\\wwwroot\\Images\\Profiles\\d9d7b052-8a5c-45d8-9d89-38ecfb338449_do.jfif",
+      "PackagePath": "staticwebassets\\Images\\Profiles\\d9d7b052-8a5c-45d8-9d89-38ecfb338449_do.jfif"
+    },
+    {
+      "Id": "C:\\Users\\DELL\\Desktop\\Dot Net Training\\Bishnu Sir\\Web Development\\HRM\\HRM.Web\\wwwroot\\Images\\Profiles\\eca18adf-3d94-468c-bf4f-15a0e5617f41_do.jfif",
+      "PackagePath": "staticwebassets\\Images\\Profiles\\eca18adf-3d94-468c-bf4f-15a0e5617f41_do.jfif"
+    },
+    {
+      "Id": "C:\\Users\\DELL\\Desktop\\Dot Net Training\\Bishnu Sir\\Web Development\\HRM\\HRM.Web\\wwwroot\\Images\\Profiles\\fdc9f2d0-2ebd-4a48-9bbf-222ccba7f2d0_do.jfif",
+      "PackagePath": "staticwebassets\\Images\\Profiles\\fdc9f2d0-2ebd-4a48-9bbf-222ccba7f2d0_do.jfif"
+    },
+    {
       "Id": "C:\\Users\\DELL\\Desktop\\Dot Net Training\\Bishnu Sir\\Web Development\\HRM\\HRM.Web\\wwwroot\\bootstrap-icons\\bootstrap-icons.svg",
       "PackagePath": "staticwebassets\\bootstrap-icons\\bootstrap-icons.svg"
     },

@@ -1,5 +1,6 @@
 ﻿using HRM.Web.Enums;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace HRM.Web.Models
 {
@@ -18,6 +19,11 @@ namespace HRM.Web.Models
         public DateTime JoinDate { get; set; }
 
         public string Designation { get; set; }
+
+        [NotMapped]
+        public IFormFile ProfileImage { get; set; }
+
+        public string ProfileImagePath { get; set; }
 
         public Department Department { get; set; }
         public int DepartmentId { get; set; }

@@ -3,6 +3,7 @@
 <table class="table">
     <thead>
         <tr>
+            <th></th>
             <th>Name</th>
             <th>Email</th>
             <th>Address</th>
@@ -17,7 +18,9 @@
     <tbody>
         @foreach (var employee in Model)
         {
+            var profileSrc = string.IsNullOrEmpty(employee.ProfileImagePath) ? "/Images/Perosn.jpg" : employee.ProfileImagePath;
             <tr>
+                <td><img class="rounded-circle" src=@profileSrc height="20"/></td>
                 <td>@employee.Name</td>
                 <td>@employee.Email</td>
                 <td>@employee.Address</td>

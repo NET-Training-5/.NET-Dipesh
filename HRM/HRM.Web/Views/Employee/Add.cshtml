@@ -7,7 +7,7 @@
 
 }
 
-<form action="/employee/add" method="post">
+<form action="/employee/add" method="post" enctype="multipart/form-data">
     <div class="row">
         <div class="mb-3 col-md-4">
             <label asp-for=Name class="form-label"></label>
@@ -35,6 +35,10 @@
         <div class="mb-3 col-md-4">
             <label asp-for=JoinDate class="form-label"></label>
             <input asp-for=JoinDate class="form-control">
+        </div>
+        <div class="mb-3 col-md-12">
+            <label asp-for=ProfileImage class="form-label"></label>
+            <input asp-for=ProfileImage class="form-control">
         </div>
     </div>
 
