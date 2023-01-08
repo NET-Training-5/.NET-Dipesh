@@ -22,7 +22,7 @@ namespace HRM.Web.Controllers
 
             ViewData["departments"] = departments;
 
-            var designations = db.Designations.Select(x => new SelectListItem { Text = x.Name, Value = x.Name }).ToList();
+            var designations = await db.Designations.Select(x => new SelectListItem { Text = x.Name, Value = x.Name }).ToListAsync();
 
             ViewData["designations"] = designations;
 
@@ -32,7 +32,7 @@ namespace HRM.Web.Controllers
         [HttpPost]
         public async Task<IActionResult> Add(Employee employee)
         {
-            var relativePath = SaveProfileImage(employee.ProfileImage);
+            var relativePath = await SaveProfileImage(employee.ProfileImage);
 
             employee.ProfileImagePath = relativePath;
 
