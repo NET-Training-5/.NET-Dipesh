@@ -1,12 +1,12 @@
-﻿namespace HRM.Web.Models
+﻿using HRM.Web.Models;
+
+namespace HRM.Web.ViewModels
 {
-	public class Department
+	public class DepartmentViewModel
 	{
 		public int Id { get; set; }
 		public string Name { get; set; }
 		public string? Description { get; set; }
 		public DateTime? Established { get; set; }
-
-		public List<Employee> Employees { get; set; }
 	}
 }

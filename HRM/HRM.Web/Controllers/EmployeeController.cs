@@ -1,85 +1,94 @@
-﻿using HRM.Web.Models;
+﻿using HRM.Web.Mapper;
+using HRM.Web.Models;
+using HRM.Web.ViewModels;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Infrastructure;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using System.Reflection;
 
 namespace HRM.Web.Controllers
 {
-    public class EmployeeController : Controller
-    {
-        private HRDbContext db = new HRDbContext();
+	public class EmployeeController : Controller
+	{
+		private HRDbContext db = new HRDbContext();
 
-        public async Task<IActionResult> Index()
-        {
-            var employees = await db.Employees.Include(e => e.Department).ToListAsync();
-            return View(employees);
-        }
+		public async Task<IActionResult> Index()
+		{
+			var employees = await db.Employees.Include(e => e.Department).ToListAsync();
 
-        public async Task<IActionResult> Add()
-        {
-            var departments = await db.Departments.Select(x => new SelectListItem { Text = x.Name, Value = x.Id.ToString() }).ToListAsync();
+			var employeeViewModels = employees.ToViewModel();
+			return View(employeeViewModels);
+		}
 
-            ViewData["departments"] = departments;
+		public async Task<IActionResult> Add()
+		{
+			var departments = await db.Departments.Select(x => new SelectListItem { Text = x.Name, Value = x.Id.ToString() }).ToListAsync();
 
-            var designations = await db.Designations.Select(x => new SelectListItem { Text = x.Name, Value = x.Name }).ToListAsync();
+			ViewData["departments"] = departments;
 
-            ViewData["designations"] = designations;
+			var designations = await db.Designations.Select(x => new SelectListItem { Text = x.Name, Value = x.Name }).ToListAsync();
 
-            return View();
-        }
+			ViewData["designations"] = designations;
 
-        [HttpPost]
-        public async Task<IActionResult> Add(Employee employee)
-        {
-            var relativePath = await SaveProfileImage(employee.ProfileImage);
+			return View();
+		}
 
-            employee.ProfileImagePath = relativePath;
+		[HttpPost]
+		public async Task<IActionResult> Add(EmployeeViewModel employeeViewModel)
+		{
+			var relativePath = await SaveProfileImage(employeeViewModel.ProfileImage);
 
-            await db.Employees.AddAsync(employee);
-            await db.SaveChangesAsync();
-            return RedirectToAction(nameof(Index));
-        }
+			//Map viewModel to model
 
-        public IActionResult Edit(int id)
-        {
-            var employee = db.Employees.Find(id);
-            return View(employee);
-        }
+			var employee = employeeViewModel.ToModel();
 
-        [HttpPost]
-        public IActionResult edit(Employee employee)
-        {
-            db.Employees.Update(employee);
-            db.SaveChanges();
-            return RedirectToAction(nameof(Index));
-        }
+			employee.ProfileImagePath = relativePath;
 
-        public IActionResult Delete(int id)
-        {
-            var employee = db.Employees.Find(id);
-            return View(employee);
-        }
+			await db.Employees.AddAsync(employee);
+			await db.SaveChangesAsync();
+			return RedirectToAction(nameof(Index));
+		}
 
-        [HttpPost]
-        public async Task<IActionResult> Delete(Employee employee)
-        {
-            db.Employees.Remove(employee);
-            await db.SaveChangesAsync();
-            return RedirectToAction(nameof(Index));
-        }
+		public IActionResult Edit(int id)
+		{
+			var employee = db.Employees.Find(id);
+			return View(employee);
+		}
 
-        private async Task<string> SaveProfileImage(IFormFile profileImage)
-        {
-            var fileName = profileImage.FileName;
-            var uniqueFileName = $"{Guid.NewGuid()}_{fileName}";
-            var relativePath = $"/images/profiles/{uniqueFileName}";
-            var currentAppPath = Directory.GetCurrentDirectory();
-            var fullFilePath = Path.Combine(currentAppPath, $"wwwroot/{relativePath}");
+		[HttpPost]
+		public IActionResult edit(Employee employee)
+		{
+			db.Employees.Update(employee);
+			db.SaveChanges();
+			return RedirectToAction(nameof(Index));
+		}
 
-            var stream = System.IO.File.Create(fullFilePath);
-            await profileImage.CopyToAsync(stream);
-            return relativePath;
-        }
-    }
+		public IActionResult Delete(int id)
+		{
+			var employee = db.Employees.Find(id);
+			return View(employee);
+		}
+
+		[HttpPost]
+		public async Task<IActionResult> Delete(Employee employee)
+		{
+			db.Employees.Remove(employee);
+			await db.SaveChangesAsync();
+			return RedirectToAction(nameof(Index));
+		}
+
+		private async Task<string> SaveProfileImage(IFormFile profileImage)
+		{
+			var fileName = profileImage.FileName;
+			var uniqueFileName = $"{Guid.NewGuid()}_{fileName}";
+			var relativePath = $"/images/profiles/{uniqueFileName}";
+			var currentAppPath = Directory.GetCurrentDirectory();
+			var fullFilePath = Path.Combine(currentAppPath, $"wwwroot/{relativePath}");
+
+			var stream = System.IO.File.Create(fullFilePath);
+			await profileImage.CopyToAsync(stream);
+			return relativePath;
+		}
+	}
 }

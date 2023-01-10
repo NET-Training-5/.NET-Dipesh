@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "zDPnxao1Q9Lb7KelJDMELA80CbCPOiRvHAq531pnQQk=",
+  "Hash": "frzev2cgZnQx2PhzN2SFFvCAwQY6k4K9MW/pwe7+e/4=",
   "Source": "HRM.Web",
   "BasePath": "_content/HRM.Web",
   "Mode": "Default",
@@ -33437,6 +33437,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Images\\Profiles\\0925d82d-335a-4b4e-9fed-fd467dc95447_do.jfif"
+    },
+    {
+      "Identity": "C:\\Users\\DELL\\Desktop\\Dot Net Training\\Bishnu Sir\\Web Development\\HRM\\HRM.Web\\wwwroot\\Images\\Profiles\\44d2f10f-4116-43b6-afbe-1fccba6f8407_IMG_20220722_100933.jpg",
+      "SourceId": "HRM.Web",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\DELL\\Desktop\\Dot Net Training\\Bishnu Sir\\Web Development\\HRM\\HRM.Web\\wwwroot\\",
+      "BasePath": "_content/HRM.Web",
+      "RelativePath": "Images/Profiles/44d2f10f-4116-43b6-afbe-1fccba6f8407_IMG_20220722_100933.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Images\\Profiles\\44d2f10f-4116-43b6-afbe-1fccba6f8407_IMG_20220722_100933.jpg"
     },
     {
       "Identity": "C:\\Users\\DELL\\Desktop\\Dot Net Training\\Bishnu Sir\\Web Development\\HRM\\HRM.Web\\wwwroot\\Images\\Profiles\\7ad4ceb6-2c55-4308-b775-7bff10624b3c_do.jfif",

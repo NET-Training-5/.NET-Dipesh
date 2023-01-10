@@ -1,9 +1,9 @@
 ﻿using HRM.Web.Enums;
-using System.ComponentModel.DataAnnotations.Schema;
+using HRM.Web.Models;
 
-namespace HRM.Web.Models
+namespace HRM.Web.ViewModels
 {
-	public class Employee
+	public class EmployeeViewModel
 	{
 		public int Id { get; set; }
 		public string Name { get; set; }
@@ -18,9 +18,11 @@ namespace HRM.Web.Models
 
 		public string Designation { get; set; }
 
-		public string ProfileImagePath { get; set; }
+		public IFormFile ProfileImage { get; set; }
 
-		public Department Department { get; set; }
+		public string? ProfileImagePath { get; set; }
+
+		public string? DepartmentName { get; set; }
 		public int DepartmentId { get; set; }
 	}
 }

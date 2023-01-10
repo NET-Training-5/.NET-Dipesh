@@ -1,5 +1,6 @@
 ﻿@using HRM.Web.Enums;
-@model Employee
+@using HRM.Web.ViewModels;
+@model EmployeeViewModel
 @{
     ViewData["Title"]="Add";
     var departments = ViewData["departments"] as IEnumerable<SelectListItem>;
@@ -25,7 +26,7 @@
     <div class="row">
         
         <div class="mb-3 col-md-4">
-        <label asp-for=Department class="form-label"></label>
+        <label asp-for=DepartmentName class="form-label"></label>
         <select  asp-for=DepartmentId asp-items=departments class="form-control"></select>
         </div>
         <div class="mb-3 col-md-4">
@@ -45,6 +46,7 @@
     <div class="row">
         <div class="mb-3 col-md-4">
         <label asp-for=Gender class="form-label"></label>
+        </div>
         <div class="form-check form-check-inline">
             <input class="form-check-input" type="radio" name=Gender id="male" value="@Gender.Male">
             <label class="form-check-label" for="male">Male</label>
