@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "FGNqvydGApKSGHM4aXDNU4V+7TMHgzrgiHrHjAcESyP11EXl82EXXASwTk6LTFBAVNX4wyhUcTfh/7dHDUxgZw==",
+  "dgSpecHash": "/IwCUxUFG7MRRYG9KtjPS9zTjLggV9jdXApRYCa51Cdwavv7Ynj5dH6G7spnQCzs9FaN3z6juahHlNN1RlIhPw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\DELL\\Desktop\\Dot Net Training\\Bishnu Sir\\Web Development\\HRM\\HRM.Web\\HRM.Web.csproj",
+  "projectFilePath": "C:\\Users\\DELL\\Desktop\\Dot Net Training\\Bishnu Sir\\Web Development\\HRM\\HRM.Infrastructure\\HRM.Infrastructure.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\DELL\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\DELL\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",

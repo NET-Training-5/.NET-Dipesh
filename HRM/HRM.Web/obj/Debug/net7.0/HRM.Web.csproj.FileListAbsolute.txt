@@ -274,3 +274,7 @@ C:\Users\DELL\Desktop\Dot Net Training\Bishnu Sir\Web Development\HRM\HRM.Web\bi
 C:\Users\DELL\Desktop\Dot Net Training\Bishnu Sir\Web Development\HRM\HRM.Web\bin\Debug\net7.0\runtimes\win\lib\net6.0\System.Drawing.Common.dll
 C:\Users\DELL\Desktop\Dot Net Training\Bishnu Sir\Web Development\HRM\HRM.Web\bin\Debug\net7.0\runtimes\win\lib\net6.0\System.Security.Cryptography.ProtectedData.dll
 C:\Users\DELL\Desktop\Dot Net Training\Bishnu Sir\Web Development\HRM\HRM.Web\bin\Debug\net7.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
+C:\Users\DELL\Desktop\Dot Net Training\Bishnu Sir\Web Development\HRM\HRM.Web\bin\Debug\net7.0\HRM.ApplicationCore.dll
+C:\Users\DELL\Desktop\Dot Net Training\Bishnu Sir\Web Development\HRM\HRM.Web\bin\Debug\net7.0\HRM.Infrastructure.dll
+C:\Users\DELL\Desktop\Dot Net Training\Bishnu Sir\Web Development\HRM\HRM.Web\bin\Debug\net7.0\HRM.ApplicationCore.pdb
+C:\Users\DELL\Desktop\Dot Net Training\Bishnu Sir\Web Development\HRM\HRM.Web\bin\Debug\net7.0\HRM.Infrastructure.pdb

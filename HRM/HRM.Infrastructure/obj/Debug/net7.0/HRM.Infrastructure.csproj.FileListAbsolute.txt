@@ -1,0 +1,17 @@
+C:\Users\DELL\Desktop\Dot Net Training\Bishnu Sir\Web Development\HRM\HRM.Infrastructure\bin\Debug\net7.0\HRM.Infrastructure.deps.json
+C:\Users\DELL\Desktop\Dot Net Training\Bishnu Sir\Web Development\HRM\HRM.Infrastructure\bin\Debug\net7.0\HRM.Infrastructure.runtimeconfig.json
+C:\Users\DELL\Desktop\Dot Net Training\Bishnu Sir\Web Development\HRM\HRM.Infrastructure\bin\Debug\net7.0\HRM.Infrastructure.dll
+C:\Users\DELL\Desktop\Dot Net Training\Bishnu Sir\Web Development\HRM\HRM.Infrastructure\bin\Debug\net7.0\HRM.Infrastructure.pdb
+C:\Users\DELL\Desktop\Dot Net Training\Bishnu Sir\Web Development\HRM\HRM.Infrastructure\bin\Debug\net7.0\HRM.ApplicationCore.dll
+C:\Users\DELL\Desktop\Dot Net Training\Bishnu Sir\Web Development\HRM\HRM.Infrastructure\bin\Debug\net7.0\HRM.ApplicationCore.pdb
+C:\Users\DELL\Desktop\Dot Net Training\Bishnu Sir\Web Development\HRM\HRM.Infrastructure\obj\Debug\net7.0\HRM.Infrastructure.csproj.AssemblyReference.cache
+C:\Users\DELL\Desktop\Dot Net Training\Bishnu Sir\Web Development\HRM\HRM.Infrastructure\obj\Debug\net7.0\HRM.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\DELL\Desktop\Dot Net Training\Bishnu Sir\Web Development\HRM\HRM.Infrastructure\obj\Debug\net7.0\HRM.Infrastructure.AssemblyInfoInputs.cache
+C:\Users\DELL\Desktop\Dot Net Training\Bishnu Sir\Web Development\HRM\HRM.Infrastructure\obj\Debug\net7.0\HRM.Infrastructure.AssemblyInfo.cs
+C:\Users\DELL\Desktop\Dot Net Training\Bishnu Sir\Web Development\HRM\HRM.Infrastructure\obj\Debug\net7.0\HRM.Infrastructure.csproj.CoreCompileInputs.cache
+C:\Users\DELL\Desktop\Dot Net Training\Bishnu Sir\Web Development\HRM\HRM.Infrastructure\obj\Debug\net7.0\HRM.Infrastructure.csproj.CopyComplete
+C:\Users\DELL\Desktop\Dot Net Training\Bishnu Sir\Web Development\HRM\HRM.Infrastructure\obj\Debug\net7.0\HRM.Infrastructure.dll
+C:\Users\DELL\Desktop\Dot Net Training\Bishnu Sir\Web Development\HRM\HRM.Infrastructure\obj\Debug\net7.0\refint\HRM.Infrastructure.dll
+C:\Users\DELL\Desktop\Dot Net Training\Bishnu Sir\Web Development\HRM\HRM.Infrastructure\obj\Debug\net7.0\HRM.Infrastructure.pdb
+C:\Users\DELL\Desktop\Dot Net Training\Bishnu Sir\Web Development\HRM\HRM.Infrastructure\obj\Debug\net7.0\HRM.Infrastructure.genruntimeconfig.cache
+C:\Users\DELL\Desktop\Dot Net Training\Bishnu Sir\Web Development\HRM\HRM.Infrastructure\obj\Debug\net7.0\ref\HRM.Infrastructure.dll

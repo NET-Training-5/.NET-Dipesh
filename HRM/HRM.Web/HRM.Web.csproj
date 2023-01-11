@@ -24,4 +24,9 @@
     <Folder Include="wwwroot\Images\Profiles\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\HRM.ApplicationCore\HRM.ApplicationCore.csproj" />
+    <ProjectReference Include="..\HRM.Infrastructure\HRM.Infrastructure.csproj" />
+  </ItemGroup>
+
 </Project>

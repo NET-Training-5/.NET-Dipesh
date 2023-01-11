@@ -1,5 +1,4 @@
-﻿@using  HRM.Web.Enums;
-@using HRM.Web.ViewModels;
+﻿@using HRM.Web.ViewModels;
 @model EmployeeViewModel
 @{
     ViewData["Title"]="Add";
@@ -8,73 +7,73 @@
 
 }
 
-<div div class="card p-5 shadow"> 
-<form action="/employee/add" method="post" enctype="multipart/form-data">
-    <div asp-validation-summary=ModelOnly></div>
-    <div class="row">
-        <div class="mb-3 col-md-4">
-            <label asp-for=Name class="form-label"></label>
-            <span asp-validation-for=Name class="text-danger"></span>
-            <input asp-for=Name class="form-control">
-            
-        </div>
-        <div class="mb-3 col-md-4">
-            <label asp-for=Email class="form-label"></label>
-            <span asp-validation-for=Email class="text-danger"></span>
+<div div class="card p-5 shadow">
+    <form action="/employee/add" method="post" enctype="multipart/form-data">
+        <div asp-validation-summary=ModelOnly></div>
+        <div class="row">
+            <div class="mb-3 col-md-4">
+                <label asp-for=Name class="form-label"></label>
+                <span asp-validation-for=Name class="text-danger"></span>
+                <input asp-for=Name class="form-control">
 
-            <input asp-for=Email class="form-control">
-        </div>
-        <div class="mb-3 col-md-4">
-            <label asp-for=Designation class="form-label"></label>
-            <select asp-for=Designation asp-items=designations class="form-control"></select>
-        </div>
-    </div>
-    <div class="row">
-        
-        <div class="mb-3 col-md-4">
-        <label asp-for=DepartmentName class="form-label"></label>
-        <select  asp-for=DepartmentId asp-items=departments class="form-control"></select>
-        </div>
-        <div class="mb-3 col-md-4">
-            <label asp-for=Dob class="form-label"></label>
-            <input asp-for=Dob class="form-control">
-        </div>
-        <div class="mb-3 col-md-4">
-            <label asp-for=JoinDate class="form-label"></label>
-            <input asp-for=JoinDate class="form-control">
-        </div>
-        <div class="mb-3 col-md-12">
-            <label asp-for=ProfileImage class="form-label"></label>
-            <input asp-for=ProfileImage class="form-control">
-        </div>
-    </div>
+            </div>
+            <div class="mb-3 col-md-4">
+                <label asp-for=Email class="form-label"></label>
+                <span asp-validation-for=Email class="text-danger"></span>
 
-    <div class="row">
+                <input asp-for=Email class="form-control">
+            </div>
+            <div class="mb-3 col-md-4">
+                <label asp-for=Designation class="form-label"></label>
+                <select asp-for=Designation asp-items=designations class="form-control"></select>
+            </div>
+        </div>
+        <div class="row">
+
+            <div class="mb-3 col-md-4">
+                <label asp-for=DepartmentName class="form-label"></label>
+                <select asp-for=DepartmentId asp-items=departments class="form-control"></select>
+            </div>
+            <div class="mb-3 col-md-4">
+                <label asp-for=Dob class="form-label"></label>
+                <input asp-for=Dob class="form-control">
+            </div>
+            <div class="mb-3 col-md-4">
+                <label asp-for=JoinDate class="form-label"></label>
+                <input asp-for=JoinDate class="form-control">
+            </div>
+            <div class="mb-3 col-md-12">
+                <label asp-for=ProfileImage class="form-label"></label>
+                <input asp-for=ProfileImage class="form-control">
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="mb-3 col-md-4">
+                <label asp-for=Gender class="form-label"></label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name=Gender id="male" value="@Gender.Male">
+                <label class="form-check-label" for="male">Male</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name=Gender id="female" value="@Gender.Female">
+                <label class="form-check-label" for="female">Female</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name=Gender id="others" value="@Gender.Others">
+                <label class="form-check-label" for="others">Others</label>
+            </div>
+        </div>
+
         <div class="mb-3 col-md-4">
-        <label asp-for=Gender class="form-label"></label>
+            <label asp-for=Address class="form-label"></label>
+            <textarea asp-for=Address class="form-control"></textarea>
         </div>
-        <div class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" name=Gender id="male" value="@Gender.Male">
-            <label class="form-check-label" for="male">Male</label>
-        </div>
-        <div class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" name=Gender id="female" value="@Gender.Female">
-            <label class="form-check-label" for="female">Female</label>
-        </div>
-        <div class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" name=Gender id="others" value="@Gender.Others">
-            <label class="form-check-label" for="others">Others</label>
-        </div>
-    </div>
 
-    <div class="mb-3 col-md-4">
-        <label asp-for=Address class="form-label"></label>
-        <textarea asp-for=Address class="form-control"></textarea>
-    </div>
+        <div class="d-flex justify-content-center ">
+            <button type="submit" class="btn btn-lg btn-primary">Save</button>
+        </div>
 
-    <div class="d-flex justify-content-center ">
-        <button type="submit" class="btn btn-lg btn-primary">Save</button>
-    </div>
-     
-</form>
+    </form>
 </div>

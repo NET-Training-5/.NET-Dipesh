@@ -1,4 +1,4 @@
-﻿namespace HRM.Web.Enums;
+﻿namespace HRM.ApplicationCore.Enums;
 
 public enum Gender
 {

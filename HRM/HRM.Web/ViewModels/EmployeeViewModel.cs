@@ -1,4 +1,4 @@
-﻿using HRM.Web.Enums;
+﻿using HRM.ApplicationCore.Enums;
 using HRM.Web.Models;
 using System.ComponentModel.DataAnnotations;
 
