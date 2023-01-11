@@ -278,3 +278,11 @@ C:\Users\DELL\Desktop\Dot Net Training\Bishnu Sir\Web Development\HRM\HRM.Web\bi
 C:\Users\DELL\Desktop\Dot Net Training\Bishnu Sir\Web Development\HRM\HRM.Web\bin\Debug\net7.0\HRM.Infrastructure.dll
 C:\Users\DELL\Desktop\Dot Net Training\Bishnu Sir\Web Development\HRM\HRM.Web\bin\Debug\net7.0\HRM.ApplicationCore.pdb
 C:\Users\DELL\Desktop\Dot Net Training\Bishnu Sir\Web Development\HRM\HRM.Web\bin\Debug\net7.0\HRM.Infrastructure.pdb
+C:\Users\DELL\Desktop\Dot Net Training\Bishnu Sir\Web Development\HRM\HRM.Web\bin\Debug\net7.0\Microsoft.AspNetCore.Cryptography.Internal.dll
+C:\Users\DELL\Desktop\Dot Net Training\Bishnu Sir\Web Development\HRM\HRM.Web\bin\Debug\net7.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+C:\Users\DELL\Desktop\Dot Net Training\Bishnu Sir\Web Development\HRM\HRM.Web\bin\Debug\net7.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+C:\Users\DELL\Desktop\Dot Net Training\Bishnu Sir\Web Development\HRM\HRM.Web\bin\Debug\net7.0\Microsoft.Extensions.Identity.Core.dll
+C:\Users\DELL\Desktop\Dot Net Training\Bishnu Sir\Web Development\HRM\HRM.Web\bin\Debug\net7.0\Microsoft.Extensions.Identity.Stores.dll
+C:\Users\DELL\Desktop\Dot Net Training\Bishnu Sir\Web Development\HRM\HRM.Web\bin\Debug\net7.0\Microsoft.AspNetCore.Identity.UI.dll
+C:\Users\DELL\Desktop\Dot Net Training\Bishnu Sir\Web Development\HRM\HRM.Web\bin\Debug\net7.0\Microsoft.Extensions.FileProviders.Embedded.dll
+C:\Users\DELL\Desktop\Dot Net Training\Bishnu Sir\Web Development\HRM\HRM.Web\obj\Debug\net7.0\HRM.Web.MvcApplicationPartsAssemblyInfo.cs

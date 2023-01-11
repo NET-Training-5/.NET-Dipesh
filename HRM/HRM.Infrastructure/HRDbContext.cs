@@ -1,9 +1,11 @@
 ﻿using HRM.Web.Models;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
 namespace HRM.Web
 {
-    public class HRDbContext : DbContext
+    public class HRDbContext : IdentityDbContext<IdentityUser>
     {
         public DbSet<Employee> Employees { get; set; }
         public DbSet<Department> Departments { get; set; }
