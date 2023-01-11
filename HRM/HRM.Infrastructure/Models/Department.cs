@@ -7,6 +7,6 @@
 		public string? Description { get; set; }
 		public DateTime? Established { get; set; }
 
-		public List<Employee> Employees { get; set; }
+		public List<Employee>? Employees { get; set; }
 	}
 }

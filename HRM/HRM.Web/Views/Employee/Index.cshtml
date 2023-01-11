@@ -1,6 +1,15 @@
 ﻿@using HRM.Web.ViewModels;
 @model List<EmployeeViewModel>
 
+    @{
+        ViewData["Title"] = "Employee";
+    }
+
+<form class="float-end">
+    <input type="text" name = "searchText" placeholder="Type Something" class="w-50 mb-2" />
+    <button type="submit">Search</button>
+</form>
+
 <table class="table">
     <thead>
         <tr>
